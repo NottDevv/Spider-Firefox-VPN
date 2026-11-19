@@ -30,7 +30,7 @@ class AnnouncementOverlay extends StatelessWidget {
           child: IgnorePointer(
             child: ColoredBox(
               color: Theme.of(context).colorScheme.scrim
-                  .withValues(alpha: 0.16),
+                  .withOpacity(0.16),
             ),
           ),
         ),
@@ -165,12 +165,12 @@ class _AnnouncementPanelState extends State<AnnouncementPanel>
                     child: Material(
                       key: const ValueKey('announcement-card'),
                       elevation: 20,
-                      shadowColor: scheme.shadow.withValues(alpha: 0.22),
+                      shadowColor: scheme.shadow.withOpacity(0.22),
                       clipBehavior: Clip.antiAlias,
-                      color: scheme.surfaceContainerLowest,
+                      color: scheme.surface,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24),
-                        side: BorderSide(color: color.withValues(alpha: 0.18)),
+                        side: BorderSide(color: color.withOpacity(0.18)),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(24),
@@ -185,7 +185,7 @@ class _AnnouncementPanelState extends State<AnnouncementPanel>
                                   width: 46,
                                   height: 46,
                                   decoration: BoxDecoration(
-                                    color: color.withValues(alpha: 0.10),
+                                    color: color.withOpacity(0.10),
                                     borderRadius: BorderRadius.circular(14),
                                   ),
                                   child: Icon(icon, color: color, size: 25),
