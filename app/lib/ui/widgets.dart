@@ -161,10 +161,9 @@ ThemeData midnightTheme(ThemeData base) {
         brightness: Brightness.dark,
       ).copyWith(
         surface: Midnight.bottom,
-        surfaceContainer: Midnight.bottom,
         onSurface: Colors.white,
         onSurfaceVariant: Midnight.muted,
-        secondaryContainer: Colors.white.withValues(alpha: 0.10),
+        secondaryContainer: Colors.white.withOpacity(0.10),
         onSecondaryContainer: Colors.white,
       );
   return ThemeData(
@@ -398,7 +397,7 @@ class CountryFlag extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         border: Border.all(
-          color: scheme.outlineVariant.withValues(alpha: 0.6),
+          color: scheme.outlineVariant.withOpacity(0.6),
           width: 0.5,
         ),
       ),
@@ -614,7 +613,7 @@ class QuotaBar extends StatelessWidget {
                 child: LinearProgressIndicator(
                   value: value,
                   color: color,
-                  backgroundColor: scheme.surfaceContainerHighest,
+                  backgroundColor: scheme.surfaceVariant,
                 ),
               ),
             ),
@@ -651,7 +650,7 @@ class Pill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: c.withValues(alpha: 0.12),
+        color: c.withOpacity(0.12),
         borderRadius: BorderRadius.circular(999),
       ),
       child: Row(
