@@ -168,7 +168,7 @@ class _RelayTestDialogState extends State<_RelayTestDialog> {
             Expanded(
               child: DecoratedBox(
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.surfaceContainerLow,
+                  color: theme.colorScheme.surface,
                   border: Border.all(color: theme.colorScheme.outlineVariant),
                   borderRadius: BorderRadius.circular(12),
                 ),
