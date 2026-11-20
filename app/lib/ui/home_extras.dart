@@ -38,7 +38,7 @@ class _SparkPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final base = Paint()
-      ..color = color.withValues(alpha: 0.18)
+      ..color = color.withOpacity(0.18)
       ..strokeWidth = 1;
     canvas.drawLine(
       Offset(0, size.height - 0.5),
@@ -75,7 +75,7 @@ class _SparkPainter extends CustomPainter {
         ..shader = LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [color.withValues(alpha: 0.28), color.withValues(alpha: 0)],
+          colors: [color.withOpacity(0.28), color.withOpacity(0)],
         ).createShader(Offset.zero & size),
     );
     canvas.drawPath(
@@ -460,7 +460,7 @@ class _FlagStripState extends State<FlagStrip> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: widget.accent.withValues(alpha: 0.75),
+                              color: widget.accent.withOpacity(0.75),
                               width: 2.5,
                             ),
                           ),
