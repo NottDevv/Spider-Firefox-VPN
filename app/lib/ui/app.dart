@@ -44,7 +44,7 @@ ThemeData _theme(Brightness brightness, Locale locale) {
       color: dark ? const Color(0xFF1A1B23) : Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: scheme.outlineVariant.withValues(alpha: 0.4)),
+        side: BorderSide(color: scheme.outlineVariant.withOpacity(0.4)),
       ),
     ),
   );
@@ -367,7 +367,7 @@ class _LostBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
     width: double.infinity,
-    color: StatusColors.bad.withValues(alpha: 0.14),
+    color: StatusColors.bad.withOpacity(0.14),
     padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 10),
     child: Row(
       children: [
