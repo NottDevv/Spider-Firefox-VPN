@@ -219,7 +219,7 @@ class _PillItemState extends State<_PillItem> {
                 onTapUp: (_) => setState(() => _pressed = false),
                 onTapCancel: () => setState(() => _pressed = false),
                 onHover: (v) => setState(() => _hovered = v),
-                splashColor: PillNavBar.green.withValues(alpha: 0.38),
+                splashColor: PillNavBar.green.withOpacity(0.38),
                 child: Container(
                   width: widget.horizontal ? null : 72,
                   // The bar gets a tall height from its parent, so the
