@@ -569,7 +569,7 @@ class _ErrorBox extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
-      color: StatusColors.bad.withValues(alpha: 0.12),
+      color: StatusColors.bad.withOpacity(0.12),
       borderRadius: BorderRadius.circular(8),
     ),
     child: Text(
